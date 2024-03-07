@@ -47,18 +47,20 @@ def main(p):
 
   print(f'{CYAN_COLOR}Checking: {DEFAULT_COLOR}3/4', end='\r')
 
-  res_tigo = tigo_checker(p)
-
-  if res_tigo:
-    exit(f'{GREEN_COLOR}{res_tigo}')
-
-
-  print(f'{CYAN_COLOR}Checking: {DEFAULT_COLOR}4/4', end='\r')
 
   res_claro = claro_checker(p)
 
   if res_claro:
     exit(f'{GREEN_COLOR}{res_claro}')
+
+
+  print(f'{CYAN_COLOR}Checking: {DEFAULT_COLOR}4/4', end='\r')
+
+  res_tigo = tigo_checker(p)
+
+  if res_tigo:
+    exit(f'{GREEN_COLOR}{res_tigo}')
+
 
   print(RED_COLOR+'\n\nSorry, the phone number has not been found, check it or try again later\n')
 
